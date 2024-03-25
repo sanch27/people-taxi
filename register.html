@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Register page</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="heading fade-in">
+        <div class="topnav" id="myTopnav">
+            <a href="">Peoples Taxis Registration</a>
+        </div>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css href=https://driver.peopletaxis.com/static/trip/css/register_agent.css">
+    <div class="triplinks">
+        <a href="file:///C:/peoples%20taxi/register.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
+        <b>Passenger Registartion</b>
+    </a>
+    <a href="file:///C:/peoples%20taxi/register_driver.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
+        <b>Driver Registartion</b>
+    </a>
+    <a href="file:///C:/peoples%20taxi/register_agent.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
+        <b>Agent Registartion</b>
+    </a>
+    </div>
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    
+                    
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Passenger Registartion!</h1>
+                                <div id="general-error-message" class="general-error-message" style="display: none; color: red;"></div>
+                            </div>
+                            <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="First Name"required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Last Name"required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address"required>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    
+                                        <div class="input-group">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                                   placeholder="Password (8 digits)" pattern="\d{8}" required>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
+                                                    <i class="fa fa-eye-slash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        function validatePassword() {
+                                            var passwordInput = document.getElementById("exampleInputPassword");
+                                            var password = passwordInput.value;
+                                    
+                                            if (password.length !== 8) {
+                                                alert("Password must be exactly 8 digits.");
+                                                return false;
+                                            }
+                                            return true;
+                                        }
+                                    
+                                        function togglePasswordVisibility() {
+                                            var passwordInput = document.getElementById("exampleInputPassword");
+                                            if (passwordInput.type === "password") {
+                                                passwordInput.type = "text";
+                                                document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                                document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                            } else {
+                                                passwordInput.type = "password";
+                                                document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                                document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                            }
+                                        }
+                                    </script>
+                                    
+                                    
+                                </br></br></br>
+
+                                                                  
+                                <div class="col-sm-6">
+                                    
+                                    <div class="input-group">
+                                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword"
+                                               placeholder="Repeat Password (8 digits)" pattern="\d{8}" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="toggleConfirmPasswordVisibility()">
+                                                <i class="fa fa-eye-slash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                    function toggleConfirmPasswordVisibility() {
+                                        var confirmPasswordInput = document.getElementById("exampleRepeatPassword");
+                                        if (confirmPasswordInput.type === "password") {
+                                            confirmPasswordInput.type = "text";
+                                            document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                            document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                        } else {
+                                            confirmPasswordInput.type = "password";
+                                            document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                            document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                        }
+                                    }
+                                </script>
+                                
+                                    
+                                    <input type="hidden" name="csrmiddlewaretoken" value="HIPpit6H40EjqIaBErbmaTKAE0kdA2S1ALm341z5dmhqiQREBNFLkbBwfATjU07c">
+                                    <div id="phone-error-message" class="phone-error-message" style="color: red;">Enter a valid 10-digit number.</div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="tel" name="username" class="form-control form-control-user" id="exampleInputPhoneNumber"
+                                               placeholder="Phone Number (10 digits only)" maxlength="10" pattern="[0-9]{10}" required id="id_username">
+                                    </div></br></br>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label for="exampleInputDOB">Date of Birth:</label>
+                                        <input type="date" class="form-control form-control-user" id="exampleInputDOB"
+                                               name="dob" max="2003-12-31" value="2000-01-01" required>
+                                    </div></br></br></br></br>
+                                    
+                                    
+                                    <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                        Register Account
+                                    </a>
+                                    <hr>
+                                    <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <i class="fab fa-google fa-fw"></i> Register with Google
+                                    </a>
+                                    
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="login.html">Already have an account? Login!</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Driver Registartion!</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0"><input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" required></div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="Last Name"required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Email Address"required>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                
+                                    <div class="input-group">
+                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                               placeholder="Password (8 digits)" pattern="\d{8}" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
+                                                <i class="fa fa-eye-slash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    function togglePasswordVisibility() {
+                                        var passwordInput = document.getElementById("exampleInputPassword");
+                                        if (passwordInput.type === "password") {
+                                            passwordInput.type = "text";
+                                            document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                            document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                        } else {
+                                            passwordInput.type = "password";
+                                            document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                            document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                        }
+                                    }
+                                </script>
+                                
+                            </br></br></br>
+
+                                                              
+                            <div class="col-sm-6">
+                                
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword"
+                                           placeholder="Repeat Password (8 digits)" pattern="\d{8}" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="toggleConfirmPasswordVisibility()">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <script>
+                                function toggleConfirmPasswordVisibility() {
+                                    var confirmPasswordInput = document.getElementById("exampleRepeatPassword");
+                                    if (confirmPasswordInput.type === "password") {
+                                        confirmPasswordInput.type = "text";
+                                        document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                        document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                    } else {
+                                        confirmPasswordInput.type = "password";
+                                        document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                        document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                    }
+                                }
+                            </script>
+                            
+                                
+                                
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="tel" class="form-control form-control-user" id="exampleInputPhoneNumber"
+                                           placeholder="Phone Number (10 digits only)" pattern="[0-9]{10}" required>
+                                </div>
+
+                                <script>
+                                    function validatePhoneNumber() {
+                                        var countryCode = "+91";
+                                        var phoneNumber = document.getElementById("phoneNumber").value;
+                                        if (phoneNumber.length !== 10 || !/^\d{10}$/.test(phoneNumber)) {
+                                            alert("Please enter a 10-digit phone number without any special characters.");
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+                            
+                                    function enforceMaxLength(element) {
+                                        if (element.value.length > 10) {
+                                            alert("Please enter only 10 digits for the phone number.");
+                                            element.value = element.value.slice(0, 10);
+                                        }
+                                    }
+                                </script>
+                            </br></br>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label for="exampleInputDOB">   Date of Birth:</label>
+                                    <input type="date" class="form-control form-control-user" id="exampleInputDOB"
+                                           name="dob" max="2003-12-31" value="2000-01-01" required>
+                                </div></br></br></br></br>
+
+                                <div class="col-sm-12">
+                                    <label for="exampleAddress">Address:</label>
+                                    <textarea class="form-control form-control-user" id="exampleAddress"
+                                              placeholder="Enter your address..." rows="3"></textarea>
+                                </div></br></br>
+                                <div class="col-sm-12">
+                                    <label for="photo"> Vehicle Photo:</label>
+                                    <input type="file" id="photo" name="photo" accept="image/*" class="form-control-file"></br>
+                            
+                                    <label for="licenseCopy">License Copy:</label>
+                                    <input type="file" id="licenseCopy" name="licenseCopy" accept="image/*" class="form-control-file"></br>
+                            
+                                    <label for="vehicleNumber">Vehicle Number:</label>
+                                    <input type="file" id="vehicleNumber" name="vehicleNumber" accept="image/*" class="form-control-file"></br>
+                            
+                                  
+                            
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <label for="exampleVehicledeatils">Vehicle Details:</label>
+                                    <textarea class="form-control form-control-user" id="exampleVehicledeatils"
+                                              placeholder="Enter your vehicle details..." rows="3"></textarea>
+                                </div></br>
+                                <div class="col-sm-12">
+                                    <label for="aadharCopy">Aadhar Copy:</label>
+                                    <input type="file" id="aadharCopy" name="aadharCopy" accept="image/*" class="form-control-file">
+
+                                </div></br></br></br></br>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Register Account
+                                </a>
+                                <hr>
+                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Register with Google
+                                </a>
+                                
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="login.html">Already have an account? Login!</a>
+                            </div>
+                        </div>
+                    
+
+                            
+                            </div>
+                        </form>
+                    </div>
+
+                                                      
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Agent Registartion!</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0"><input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" required></div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="Last Name"required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Email Address"required>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                
+                                    <div class="input-group">
+                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                               placeholder="Password (8 digits)" pattern="\d{8}" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
+                                                <i class="fa fa-eye-slash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    function togglePasswordVisibility() {
+                                        var passwordInput = document.getElementById("exampleInputPassword");
+                                        if (passwordInput.type === "password") {
+                                            passwordInput.type = "text";
+                                            document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                            document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                        } else {
+                                            passwordInput.type = "password";
+                                            document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                            document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                        }
+                                    }
+                                </script>
+                                
+                            </br></br></br>
+
+                                                              
+                            <div class="col-sm-6">
+                                
+                                <div class="input-group">
+                                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword"
+                                           placeholder="Repeat Password (8 digits)" pattern="\d{8}" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="toggleConfirmPasswordVisibility()">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <script>
+                                function toggleConfirmPasswordVisibility() {
+                                    var confirmPasswordInput = document.getElementById("exampleRepeatPassword");
+                                    if (confirmPasswordInput.type === "password") {
+                                        confirmPasswordInput.type = "text";
+                                        document.querySelector(".fa-eye-slash").classList.add("fa-eye");
+                                        document.querySelector(".fa-eye-slash").classList.remove("fa-eye-slash");
+                                    } else {
+                                        confirmPasswordInput.type = "password";
+                                        document.querySelector(".fa-eye").classList.add("fa-eye-slash");
+                                        document.querySelector(".fa-eye").classList.remove("fa-eye");
+                                    }
+                                }
+                            </script>
+                            
+                                
+                                
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="tel" class="form-control form-control-user" id="exampleInputPhoneNumber"
+                                           placeholder="Phone Number (10 digits only)" pattern="[0-9]{10}" required>
+                                </div>
+
+                                <script>
+                                    function validatePhoneNumber() {
+                                        var countryCode = "+91";
+                                        var phoneNumber = document.getElementById("phoneNumber").value;
+                                        if (phoneNumber.length !== 10 || !/^\d{10}$/.test(phoneNumber)) {
+                                            alert("Please enter a 10-digit phone number without any special characters.");
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+                            
+                                    function enforceMaxLength(element) {
+                                        if (element.value.length > 10) {
+                                            alert("Please enter only 10 digits for the phone number.");
+                                            element.value = element.value.slice(0, 10);
+                                        }
+                                    }
+                                </script>
+                            </br></br>
+
+
+                                <div class="col-sm-12">
+                                    <label for="exampleAddress"> Company Address:</label>
+                                    <textarea class="form-control form-control-user" id="exampleAddress"
+                                              placeholder="Enter company address..." rows="3"></textarea>
+                                </div></br></br>
+                                
+                                <div class="col-sm-12">
+                                    <label for="exampleCompanydeatils">Company Details:</label>
+                                    <textarea class="form-control form-control-user" id="exampleCompanydeatils"
+                                              placeholder="Enter company details..." rows="3"></textarea>
+                                </div></br>
+                                <div class="col-sm-12">
+                                    <label for="governmentId">Government ID:</label>
+                                    <input type="file" id="governmentId" name="governmentId" accept="image/*" class="form-control-file">
+
+                                </div></br></br></br></br>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Register Account
+                                </a>
+                                <hr>
+                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Register with Google
+                                </a>
+                                
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="login.html">Already have an account? Login!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                            
+                            </div>
+                        </form>
+                    </div>
+
+
+        
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
