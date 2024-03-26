@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -34,13 +34,13 @@
     <link rel="stylesheet" type="text/css href=https://driver.peopletaxis.com/static/trip/css/register_agent.css">
     <div class="triplinks">
         <a href="file:///C:/peoples%20taxi/register.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
-        <b>Passenger Registartion</b>
+            <button>Passenger Registartion</button>
     </a>
     <a href="file:///C:/peoples%20taxi/register_driver.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
-        <b>Driver Registartion</b>
+        <button>Driver Registartion</button>
     </a>
     <a href="file:///C:/peoples%20taxi/register_agent.html" style="background: rgb(red, green, blue); border: 2px solid gray; color: black;">
-        <b>Agent Registartion</b>
+        <button>Agent Registartion</button>
     </a>
     </div>
 
@@ -69,6 +69,9 @@
             <input type="email" class="form-control form-control-user" id="exampleInputEmail"
                 placeholder="Email Address"required>
         </div>
+
+
+        <div id="pin-error-message" class="pin-error-message" style="color: red;">Enter a valid 8-digit Numbers only</div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
             
@@ -130,7 +133,7 @@
         </script>
         
             
-            
+        <div id="pin-error-message" class="pin-error-message" style="color: red;">Enter a valid 10-digit Phone Number</div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="tel" class="form-control form-control-user" id="exampleInputPhoneNumber"
                        placeholder="Phone Number (10 digits only)" pattern="[0-9]{10}" required>
@@ -193,10 +196,10 @@
             </div></br></br></br></br>
             <a href="login.html" class="btn btn-primary btn-user btn-block">
                 Register Account
-            </a>
+            </a></br></br>
             <hr>
             <a href="index.html" class="btn btn-google btn-user btn-block">
-                <i class="fab fa-google fa-fw"></i> Register with Google
+                <i class="fa fa-google"></i> Register with Google
             </a>
             
         </form>
