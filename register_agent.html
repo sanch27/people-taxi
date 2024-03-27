@@ -72,20 +72,21 @@
                 placeholder="Email Address"required>
         </div>
 
-        <div id="pin-error-message" class="pin-error-message" style="color: red;">Enter a valid 8-digit Numbers only</div>
-        <div class="form-group row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-            
-                <div class="input-group">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword"
-                           placeholder="Password (8 digits)" pattern="\d{8}" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
-                            <i class="fa fa-eye-slash"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div id="pin-error-message" class="pin-error-message" style="color: red;"></div>
+                                <div class="form-row">
+                                  
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    
+                                        <div class="input-group">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                                   placeholder="Password (8 digits)" pattern="\d{8}" required>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
+                                                    <i class="fa fa-eye-slash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
 
             <script>
                 function togglePasswordVisibility() {
@@ -134,30 +135,23 @@
         </script>
         
             
-        <div id="pin-error-message" class="pin-error-message" style="color: red;">Enter a valid 10-digit Phone Number</div>
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="tel" class="form-control form-control-user" id="exampleInputPhoneNumber"
-                       placeholder="Phone Number (10 digits only)" pattern="[0-9]{10}" required>
-            </div>
-
-            <script>
-                function validatePhoneNumber() {
-                    var countryCode = "+91";
-                    var phoneNumber = document.getElementById("phoneNumber").value;
-                    if (phoneNumber.length !== 10 || !/^\d{10}$/.test(phoneNumber)) {
-                        alert("Please enter a 10-digit phone number without any special characters.");
-                        return false;
-                    }
-                    return true;
-                }
-        
-                function enforceMaxLength(element) {
-                    if (element.value.length > 10) {
-                        alert("Please enter only 10 digits for the phone number.");
-                        element.value = element.value.slice(0, 10);
-                    }
-                }
-            </script>
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            
+            <input type="tel" class="form-control form-control-user" id="exampleInputPhoneNumber" name="phoneNumber" 
+              oninput="validatePhoneNumber(this);"
+              placeholder="Enter your phone number" required>
+            <p id="phoneNumberError" class="text-danger small"></p>
+          </div>
+          
+          <script>
+            function validatePhoneNumber(input) {
+              if (input.value.length !== 10 || !/^\d{10}$/.test(input.value)) {
+                document.getElementById("phoneNumberError").innerText = "Enter 10 digits number only";
+              } else {
+                document.getElementById("phoneNumberError").innerText = "";
+              }
+            }
+          </script>
         </br></br>
 
 
